@@ -1,6 +1,6 @@
 magic_square = [
      [8, 3, 4],
-     [1, 5, 4],
+     [1, 5, 9],
      [6, 7, 2]
     ]
 i=0
@@ -8,7 +8,6 @@ sumlist=[]
 sumlist1=[]
 while (i<magic_square.length){
     j=0
-    
     sum=0
     while (j<magic_square.length){
         sum=sum+magic_square[i][j]
@@ -61,21 +60,12 @@ console.log(sumlist3)
 console.log("diagnolal 2",sum3)
 
 function allSame(a){
-    for (i of a){
-        if (i==15){
-            return true
-        }
-        else{
-            return false
-        }
-    }
+    return a==15
 }
-a=allSame(sumlist)
-console.log(a)
-b=allSame(sumlist1)
-console.log(b)
-c=allSame(sumlist2)
-d=allSame(sumlist3)
+a=sumlist.every(allSame)
+b=sumlist1.every(allSame)
+c=sumlist2.every(allSame)
+d=sumlist3.every(allSame)
 
 s=a && b && c && d
 
