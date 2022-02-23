@@ -59,8 +59,8 @@ sumlist3.push(sum3)
 console.log(sumlist3)
 console.log("diagnolal 2",sum3)
 
-function allSame(a){
-    return a==15
+function allSame(val){
+    return val==15
 }
 a=sumlist.every(allSame)
 b=sumlist1.every(allSame)
